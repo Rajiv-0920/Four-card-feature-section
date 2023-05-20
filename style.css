@@ -166,8 +166,30 @@ footer .attribution a:hover {
   .container .container-heading {
     width: 80%;
   }
+  .cards {
+    grid-template-columns: 50% 50%;
+  }
+  .cards > :first-child {
+    justify-self: center;
+    width: 40%;
+    grid-column: span 2;
+    grid-row: unset;
+  }
+  .cards > :nth-child(2) {
+    justify-self: end;
+    width: 70%;
+  }
+  .cards > :nth-child(3) {
+    justify-self: start;
+    align-self: start;
+    width: 70%;
+  }
+  .cards > :last-child {
+    grid-column: span 2;
+    width: 40%;
+  }
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 44em) {
   main.container {
     max-width: 100%;
     padding: 20px;
@@ -176,26 +198,39 @@ footer .attribution a:hover {
     grid-template-columns: 300px;
     justify-content: center;
   }
+  .cards > .card {
+    width: 100%;
+  }
   .cards > :first-child {
     grid-row: unset;
+    grid-column: unset;
     justify-self: center;
   }
   .cards > :nth-child(2) {
+    grid-row: unset;
+    grid-column: unset;
     justify-self: center;
   }
   .cards > :nth-child(3) {
-    justify-self: center;
     grid-row: unset;
+    grid-column: unset;
+    justify-self: center;
   }
   .cards > :last-child {
+    grid-row: unset;
+    grid-column: unset;
     justify-self: center;
+  }
+  .container .container-heading {
+    width: 100%;
   }
   .container .container-title,
   .container .container-title span {
     line-height: 30px;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .container p.description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
+
